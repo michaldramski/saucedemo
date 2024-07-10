@@ -1,0 +1,19 @@
+{
+    "messages": {
+        "login": {
+            "lockedOutError": "Epic sadface: Sorry, this user has been locked out.",
+            "unknownUserError": "Epic sadface: Username and password do not match any user in this service"
+        },
+        "checkout": {
+            "userInformation": {
+                "firstNameRequired": "Error: First Name is required",
+                "lastNameRequired": "Error: Last Name is required",
+                "postalCodeRequired": "Error: Postal Code is required"
+            },
+            "orderComplete": {
+                "orderCompletedHeaderMessage": "Thank you for your order!",
+                "orderCompletedTextMessage": "Your order has been dispatched, and will arrive just as fast as the pony can get there!"
+            }
+        }
+    }
+}
