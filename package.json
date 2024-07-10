@@ -1,0 +1,32 @@
+{
+    "name": "saucedemo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "cy:open:chrome": "cypress open --browser chrome --e2e",
+        "cy:run:login:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Login.cy.ts",
+        "cy:run:products:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Products.cy.ts",
+        "cy:run:shopping:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Shopping.cy.ts",
+        "cy:run:all:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@faker-js/faker": "^8.4.1",
+        "cypress": "^13.13.0",
+        "eslint-plugin-cypress": "^3.3.0",
+        "globals": "^15.8.0",
+        "node": "^22.4.0",
+        "prettier": "^3.3.2",
+        "typescript": "^5.5.3"
+    },
+    "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^7.15.0",
+        "@typescript-eslint/parser": "^7.15.0",
+        "eslint": "^8.57.0"
+    }
+}
