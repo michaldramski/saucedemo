@@ -7,10 +7,11 @@
         "format": "prettier --write .",
         "lint": "eslint .",
         "cy:open:chrome": "cypress open --browser chrome --e2e",
+        "cy:run:all": "cypress run --spec cypress/e2e/",
+        "cy:run:all:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/",
         "cy:run:login:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Login.cy.ts",
         "cy:run:products:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Products.cy.ts",
-        "cy:run:shopping:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Shopping.cy.ts",
-        "cy:run:all:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/"
+        "cy:run:shopping:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Shopping.cy.ts"
     },
     "keywords": [],
     "author": "",
