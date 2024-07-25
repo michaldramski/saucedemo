@@ -28,7 +28,11 @@ export class CheckoutInformation extends BasePage {
         cy.get(this.postal_code_input).type(postalCode);
     }
 
-    completeInformation(firstName: string, lastName: string, postalCode: string): void {
+    completeInformation(
+        firstName: string,
+        lastName: string,
+        postalCode: string,
+    ): void {
         this.fillFirstName(firstName);
         this.fillLastName(lastName);
         this.fillPostalCode(postalCode);

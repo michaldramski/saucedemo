@@ -7,8 +7,11 @@ export class CartComponent {
     }
 
     getCartBadgeItemCount(): Cypress.Chainable<number> {
-        return cy.get(this.cart_badge).invoke('text').then((text) => {
-            return parseInt(text, 10);
-        })
+        return cy
+            .get(this.cart_badge)
+            .invoke('text')
+            .then((text) => {
+                return parseInt(text, 10);
+            });
     }
 }

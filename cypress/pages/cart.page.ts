@@ -13,7 +13,7 @@ export class CartPage extends BasePage {
                 if (element.textContent) {
                     names.push(element.textContent.trim());
                 }
-            });            
+            });
             return names;
         });
     }

@@ -1,4 +1,5 @@
 import wp from '@cypress/webpack-preprocessor';
+require('cypress-grep');
 
 export default (on) => {
     const options = {

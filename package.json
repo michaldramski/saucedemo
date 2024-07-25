@@ -8,15 +8,25 @@
         "lint": "eslint .",
         "cy:open:chrome": "cypress open --browser chrome --e2e",
         "cy:run:all": "cypress run --spec cypress/e2e/",
-        "cy:run:all:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/",
-        "cy:run:login:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Login.cy.ts",
-        "cy:run:products:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Products.cy.ts",
-        "cy:run:shopping:chrome": "cypress run --headed --browser chrome --spec cypress/e2e/Shopping.cy.ts"
+        "cy:run:chrome:all": "cypress run --headed --browser chrome --spec cypress/e2e/",
+        "cy:run:chrome:login": "cypress run --headed --browser chrome --spec cypress/e2e/Login.cy.ts",
+        "cy:run:chrome:products": "cypress run --headed --browser chrome --spec cypress/e2e/Products.cy.ts",
+        "cy:run:chrome:shopping": "cypress run --headed --browser chrome --spec cypress/e2e/Shopping.cy.ts",
+        "cy:run:chrome:smoke": "cypress run --headed --browser chrome --env grepTags=@smoke",
+        "cy:run:headless:smoke": "cypress run --headless --browser chrome --env grepTags=@smoke",
+        "cy:run:headless:non:smoke": "cypress run --headless --browser chrome --env grepTags=-@smoke",
+        "cy:run:headless:login": "cypress run --headless --browser chrome --env grepTags=@login",
+        "cy:run:headless:login:non:smoke": "cypress run --headless --browser chrome --env grepTags=@login+-@smoke",
+        "cy:run:headless:products": "cypress run --headless --browser chrome --env grepTags=@product",
+        "cy:run:headless:products:non:smoke": "cypress run --headless --browser chrome --env grepTags=@product+-@smoke",
+        "cy:run:headless:shopping": "cypress run --headless --browser chrome --env grepTags=@shopping",
+        "cy:run:headless:shopping:non:smoke": "cypress run --headless --browser chrome --env grepTags=@shopping+-@smoke"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@cypress/grep": "^4.1.0",
         "@faker-js/faker": "^8.4.1",
         "cypress": "^13.13.0",
         "eslint-plugin-cypress": "^3.3.0",
@@ -28,6 +38,7 @@
     "dependencies": {
         "@typescript-eslint/eslint-plugin": "^7.15.0",
         "@typescript-eslint/parser": "^7.15.0",
+        "dotenv": "^16.4.5",
         "eslint": "^8.57.0"
     }
 }

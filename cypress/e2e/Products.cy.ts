@@ -18,23 +18,32 @@ describe('Products tests', () => {
         productsPage = new ProductsPage();
     });
 
-    it('Should sort products names alphabetical Z to A', () => {
-        // Act
-        productsPage.sortProducts(SortOptions.ZA);
-        // Assert
-        productsPage.getInventoryItemsNames().then((names) => {
-            const sortedNames = names.sort().reverse();
-            expect(names).to.deep.equal(sortedNames);
-        });
-    });
+    it(
+        'Should sort products names alphabetical Z to A',
+        { tags: ['@product'] },
+        () => {
+            // Act
+            productsPage.sortProducts(SortOptions.ZA);
+            // Assert
+            productsPage.getInventoryItemsNames().then((names) => {
+                const sortedNames = names.sort().reverse();
+                expect(names).to.deep.equal(sortedNames);
+            });
+        },
+    );
 
-    it('Should sort products prices from high to low', () => {
-        // Act
-        productsPage.sortProducts(SortOptions.HighToLow);
-        // Assert
-        productsPage.getInventoryItemsPrices().then((prices) => {
-            const sortedPrices = [...prices].sort((a, b) => b - a);
-            expect(prices).to.deep.equal(sortedPrices);
-        });
-    });
+    it(
+        'Should sort products prices from high to low',
+        { tags: ['@smoke', '@product'] },
+        () => {
+            // Act () => {
+            // Act
+            productsPage.sortProducts(SortOptions.HighToLow);
+            // Assert
+            productsPage.getInventoryItemsPrices().then((prices) => {
+                const sortedPrices = [...prices].sort((a, b) => b - a);
+                expect(prices).to.deep.equal(sortedPrices);
+            });
+        },
+    );
 });
